@@ -1,0 +1,31 @@
+{
+  "name": "merntaskservidor",
+  "version": "1.0.0",
+  "description": "MERN API para MERN TASKS ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeanCarloV/Administrador_Proyectos_MERN.git"
+  },
+  "author": "Gean Carlo Vitorino Monjaras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeanCarloV/Administrador_Proyectos_MERN/issues"
+  },
+  "homepage": "https://github.com/GeanCarloV/Administrador_Proyectos_MERN#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.26"
+  }
+}
