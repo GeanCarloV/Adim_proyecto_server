@@ -15,6 +15,7 @@ exports.crearUsuario = async (req, res) => {
 
     
     try { 
+        
         let usuario = await Usuario.findOne({email}); 
 
         if(usuario) {
