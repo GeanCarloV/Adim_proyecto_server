@@ -1,12 +1,15 @@
-// index.js
+// servidor > index.js
 
 const express = require('express'); 
 const conectarDB = require('./config/db'); 
-
+const cors = require('cors')
 const app = express(); 
 
 
 conectarDB();
+// habilitar cors 
+app.use(cors()); 
+
 
 app.use( express.json({ extended: true }));
 

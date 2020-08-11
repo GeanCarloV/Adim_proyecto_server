@@ -1,4 +1,4 @@
-// controllers > authController.js  
+// servidor > controllers > authController.js  
 
 const Usuario = require('../models/Usuario'); 
 const bcyptjs = require('bcryptjs'); 
@@ -39,7 +39,16 @@ exports.autenticarUsuario = async (req, res) => {
     } catch (error) { 
         console.log(error)
     }
+}
 
-
-
+// otbiene que usario esta auntenticado 
+exports.usuarioAutenticado = async (req, res) => { 
+    try {
+        // enviamsoe l objeto pero sin el password, es la forma en 
+        const usuario = await Usuario.findById(req.usuario.id).select('-password');
+        res.json({usuario})
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({msg: 'Hubo un error'})
+    }
 }
